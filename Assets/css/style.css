@@ -1,6 +1,7 @@
 /* Create CSS variables at the root of the document to be used throughout the style sheet */
 :root {
    --id-color: rgb(172, 172, 212);
+   --id-color-2:  rgb(92, 135, 130);
 }
 
 body {
@@ -15,7 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1%;
-    background-color: #535050;
+    background-color: var(--id-color-2);
     color: #fff;
   }
   
@@ -42,6 +43,10 @@ body {
     color: #fff;
   }
 
+  sub img {
+    max-height: 200px;
+  }
+
   main {
     display: flex;
     flex-wrap: wrap;
@@ -49,6 +54,7 @@ body {
   }
 
   .main-side {
+    color: var(--id-color-2);
     border-right: var(--id-color) solid 3px;
     order: 0;
     width: 30%;
@@ -58,21 +64,23 @@ body {
 
   }
 
-  main p {
-
-  }
  .main-content {
   width: 70%;
   padding: 50px 30px 30px 30px;
-
+  opacity: 80%;
 
  }
 
  .main-content img {
   margin-top: 8px;
   border: var(--id-color) solid 5px;
-  max-width: 70%;
+  max-width: 100%;
  }
+
+.main-content :hover {
+  opacity: 40%;
+ }
+
   #content-about {
     font-style: italic;
     font-weight: bolder;
@@ -80,22 +88,22 @@ body {
     padding: 30px 10px 30px 60px;
   }
 
-#surf-report {
-  
-}
+
 .contact-links {
+  margin-top: 30px;
   font-size: 15px;
+  line-height: 1.5rem;
 
 }
 
 section {
-  padding: 30px 10px 30px 60px;
+  padding: 30px 50px 30px 60px;
+  min-width: 60%;
 }
 
 section ul {
   display: flex;
   justify-content: space-between;
-  min-width: 400px;
 }
 
 section a {
@@ -108,11 +116,18 @@ section a:hover {
   color:black;
 }
 
+
 @media screen and (max-width: 768px) {
   header, nav, main {
     flex-direction: column;
   }
-
+h1 {
+  width: 100%;
+  text-align: center;
+}
+sub img {
+  max-width: 100%;
+}
   .main-side {
     border-right: none;
     border-bottom: var(--id-color) solid 3px;
@@ -122,6 +137,7 @@ section a:hover {
 
   .main-content {
     width: 100%;
+    justify-content: center;
   }
 
   section ul {
