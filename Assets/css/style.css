@@ -1,0 +1,138 @@
+/* Create CSS variables at the root of the document to be used throughout the style sheet */
+:root {
+   --id-color: rgb(172, 172, 212);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    font-family: 'Century Gothic', Geneva, Tahoma, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #535050;
+    color: #fff;
+  }
+  
+  h1 {
+    font-family: 'Baskerville', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: var(--id-color);
+    padding-left: 35px;
+    padding-right: 10px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 400px;
+  }
+  
+  nav a {
+    color: var(--id-color);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-side {
+    border-right: var(--id-color) solid 3px;
+    order: 0;
+    width: 30%;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  main p {
+
+  }
+ .main-content {
+  width: 70%;
+  padding: 50px 30px 30px 30px;
+
+
+ }
+
+ .main-content img {
+  margin-top: 8px;
+  border: var(--id-color) solid 5px;
+  max-width: 70%;
+ }
+  #content-about {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 33px;
+    padding: 30px 10px 30px 60px;
+  }
+
+#surf-report {
+  
+}
+.contact-links {
+  font-size: 15px;
+
+}
+
+section {
+  padding: 30px 10px 30px 60px;
+}
+
+section ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 400px;
+}
+
+section a {
+  font-weight: bolder;
+  color: var(--id-color);
+  text-decoration: dashed 2px;
+}
+
+section a:hover {
+  color:black;
+}
+
+@media screen and (max-width: 768px) {
+  header, nav, main {
+    flex-direction: column;
+  }
+
+  .main-side {
+    border-right: none;
+    border-bottom: var(--id-color) solid 3px;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  section ul {
+  flex-direction: column;
+}
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+    
